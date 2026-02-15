@@ -1,0 +1,9 @@
+services:
+  kafka-producer:
+    build:
+      context: ..
+      dockerfile: docker/producer.Dockerfile
+    container_name: kafka_producer
+    env_file:
+      - ../.env
+    restart: always
